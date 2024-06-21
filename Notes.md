@@ -46,3 +46,11 @@ We have a master-worker architecture setup on Apache Spark.
 When a job is submitted to the master. The master decides which of the worker takes up the work and runs the task.
 Once task is run, the task in this case will be to stream data into cassandra.
 So we have a listener that is going to be getting data from kafka into spark then streamed directly into cassandra. Everything run on Docker container with a single docker compose file that helps us to spin up the entire architecture.
+
+# Dependencies in Kafka
+
+Zookeeper, Kafka, Schema Registry, Control Center
+Kafka is the broker.
+
+Control Center is dependent on the schema registry
+CC is listening for events on schema registry to visualise the data directly on kafka which is managed by zookeeper
