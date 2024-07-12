@@ -64,3 +64,11 @@ the randomuser data api to kafka as much as possible
 Instead of just one producer, we want to be producing
 all the data that is going to be sent from randomuser to
 kafka directly.
+
+## Issues Faced
+
+The Dag was not working primarily because all the python requirements had not been installed.
+Fix -> pip freeze > requirements.txt whenever new packages are installed.
+Also do not, install any unnecessary packages
+Your python version should also be the same across the project
+The images won't map well across different python versions and your build can fail.
