@@ -56,3 +56,11 @@ Control Center is dependent on the schema registry
 CC is listening for events on schema registry to visualise the data directly on kafka which is managed by zookeeper
 
 During the booting up of the containers; you can see that the dependencies are maintained and there is an order in which they are created.
+
+## After Setting up Airflow
+
+We want to make sure that we stream data directly from
+the randomuser data api to kafka as much as possible
+Instead of just one producer, we want to be producing
+all the data that is going to be sent from randomuser to
+kafka directly.
